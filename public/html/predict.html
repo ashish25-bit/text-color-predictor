@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Color</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style= "text-transform: uppercase; font-size: 3rem;
+            margin: 40px 0; position: relative;"
+        >
+            <a style="font-size: 10px; position: absolute;
+                top: 50%; transform: translateY(-50%); left: -30px;
+                cursor: pointer; display: inline-block;
+                background: #555; padding: 6px 10px;
+                border-radius: 50%; color: #fff;" 
+                title="Train The Model" href='/train'
+            > < </a>
+        Predict Color</h1>
+        <div
+            style="text-align: center;"
+        >
+            <label>Select Color: </label>
+            <input type='color' class="select-color" />
+            <div class="background" 
+                style=" width: 500px; height: 200px;
+                    background: #000; display: grid;
+                    justify-content: center; align-items: center;
+                    color: #fff; text-transform: uppercase;
+                    font-weight: bold; margin: 40px auto;"
+                > Choose Color from the color palatte above.
+            </div>
+            <button 
+                class="predict"
+                style="padding: 10px 33px; background: #34c18d;
+                    text-transform: uppercase; font-weight: bold; color: #fff;"
+            >Predict Text Color</button>
+        </div>
+    </div>
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js'></script>
+    <script src="js/predict.js"></script>
+</body>
+</html>

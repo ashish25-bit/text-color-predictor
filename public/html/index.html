@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main_container">
+        <h1 style="font-size: 3rem; margin: 40px 0;">TRAINING THE MODEL</h1>
+
+        <ul style="margin: 20px;">
+            <li>Click <b>Change Color</b> button to change the background color</li>
+            <li>Click On <b>White</b> or <b>Black</b> button to change the text color in accordance with the background color.</li>
+            <li>Click <b>Add</b> to add the RGB value with text color in the object.</li>
+            <li>Click <b>Add To CSV</b> to add the selected colors to the csv file</li>
+            <li>Click <b>TRAIN THE MODEL</b> to train the model with your dataset.</li>
+        </ul>
+        <p style="color: red; margin: 20px auto">*NOTE: If you don't click <b>Add To CSV</b> The selected colors will not be added to the training dataset</p>
+
+        <div class="background" 
+            style=" width: 500px; height: 200px;
+            display: grid; justify-content: center; align-items: center;
+            margin: 0 auto;font-weight: bold;"
+        >TEXT COLOR</div>
+
+        <div
+            style=" width: 500px; margin: 20px auto; display: grid; 
+            grid-template-columns: repeat(4, 1fr); grid-gap: 10px;"
+        >
+            <button 
+                style=" padding: 5px;  background: #c12e2e; color: #fff;" 
+                type="button" 
+                class="change_color"
+            >Change Color</button>
+            
+            <button 
+                style=" padding: 5px; background: #ece5e5; color: #000;" 
+                type="button" 
+                class="white"
+            >White</button>
+
+            <button 
+                style=" padding: 5px; background: #235ba2; color: #fff;" 
+                type="button" 
+                class="add"
+            >Add</button>
+
+            <button 
+                style=" padding: 5px; background: #000; color: #fff;" 
+                type="button" 
+                class="black"
+            >Black</button>
+
+        </div>
+
+        <button 
+            style=" display: block; width: 500px; background: #ccc;
+            margin: 20px auto; padding: 5px;"
+            class="send"
+        >Add To CSV</button>
+
+        <button 
+            style=" display: block; width: 500px;
+            margin: 20px auto; padding: 5px;
+            background: #a6aa9a;"
+            class="train"
+        >TRAIN THE MODEL</button>
+
+        <a 
+            href="/"
+            style=" display: block; width: 500px;
+            margin: 20px auto; padding: 5px 0;
+            text-align: center; background: #c12e2e; color: #fff;"
+            class="predictLink"
+        >START PREDICTING</a>
+
+        <p class="res" style="text-align: center; margin: 10px auto;"></p>
+
+        <h1 style="font-size: 2rem; margin: 40px 0;">TRAINING DATASET</h1>
+
+        <div class="output">
+            <h3>Loading...</h3>
+        </div>
+
+    </div>
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js'></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
